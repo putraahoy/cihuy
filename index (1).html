@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerimaan dan Penolakan Cinta</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+            background: url('/mnt/data/Snapins.ai_480573557_17916703101061001_2204885541412814360_n_1080.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+        button {
+            font-size: 20px;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 30px;
+            width: 120px;
+            height: 60px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #terima {
+            background-color: red;
+            color: white;
+        }
+        #tolak {
+            position: absolute;
+            background-color: gray;
+            color: white;
+        }
+        .title-container {
+            display: inline-block;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h2>Apakah kamu mau jadi pacarku?</h2>
+    </div>
+    <div class="container">
+        <button id="terima" onclick="terimaCinta()">Mau 💕</button>
+        <button id="tolak" onmouseover="pindahTombol()">Nga Mau 🖕</button>
+    </div>
+    <script>
+        function pindahTombol() {
+            let button = document.getElementById("tolak");
+            let maxX = window.innerWidth - button.offsetWidth - 20;
+            let maxY = window.innerHeight - button.offsetHeight - 20;
+            let randomX = Math.floor(Math.random() * maxX);
+            let randomY = Math.floor(Math.random() * maxY);
+            button.style.left = randomX + "px";
+            button.style.top = randomY + "px";
+        }
+
+        function terimaCinta() {
+            alert("Yeay! Kita jadian! ❤️");
+        }
+    </script>
+</body>
+</html>
